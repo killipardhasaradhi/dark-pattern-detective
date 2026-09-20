@@ -50,7 +50,10 @@ Each finding is also tagged with the closest matching category under India's CCP
 - Shadow DOM for the in-page overlay, so it never inherits or clashes with the host site's styles
 - WCAG relative-luminance contrast-ratio math for the hidden-button detector
 
-## How to Run It
+## Quick Demo / How to Run It
+
+Dark Pattern Detective is a Chrome Extension that detects potential dark-pattern
+signals directly in webpages using local browser-side heuristics.
 
 1. Clone this repo
 2. Open Chrome → `chrome://extensions`
@@ -58,6 +61,13 @@ Each finding is also tagged with the closest matching category under India's CCP
 4. Click **Load unpacked** → select this project folder
 5. Visit any website — the extension scans automatically. To see a guaranteed live demo with every pattern type present, open `demo-page.html` in this repo directly in Chrome (`File > Open File`)
 6. Click the extension icon for a full popup breakdown, or click the on-page red badge (bottom-right corner) to jump directly to each flagged element
+
+The included `demo-page.html` intentionally contains several dark-pattern
+examples so the detector can be tested immediately.
+
+After loading the extension, you can inspect the detected signals, evidence,
+confidence, severity, CCPA mapping, manipulation score, and downloadable scan
+report.
 
 ## Project Structure
 
