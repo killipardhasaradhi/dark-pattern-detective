@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>SuperDeal Store — Demo Page (contains intentional dark patterns)</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 20px; }
+  .timer { background: #fee2e2; color: #b91c1c; padding: 10px; font-weight: bold; border-radius: 6px; }
+  .primary-btn { background: #16a34a; color: #fff; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; }
+  .decline-btn { border: none; background: none; color: #ccc; font-size: 9px; opacity: 0.4; cursor: pointer; }
+  .confirmshame { display: block; margin-top: 10px; color: #999; font-size: 12px; background: none; border: none; cursor: pointer; }
+  .checkout-box { border: 1px solid #ddd; padding: 16px; border-radius: 8px; margin-top: 20px; }
+  label { display: block; margin: 8px 0; }
+</style>
+</head>
+<body>
+  <h1>SuperDeal Store</h1>
+  <div class="timer">⏰ Only 2 left in stock! Offer ends in 04:58 — hurry!</div>
+
+  <div class="checkout-box">
+    <h3>Start your free trial</h3>
+    <p>Get full access today. After your free trial, you will be automatically charged $49.99/month.</p>
+
+    <label><input type="checkbox" checked /> Sign me up for special offers and marketing emails</label>
+    <label><input type="checkbox" checked /> Add Premium Protection Plan add-on ($9.99/mo)</label>
+
+    <button class="primary-btn">Start Free Trial →</button>
+    <button class="decline-btn">No thanks</button>
+
+    <button class="confirmshame">No thanks, I don't want to save money</button>
+  </div>
+
+  <p style="margin-top:40px; font-size:12px; color:#888;">
+    This page was built to demonstrate the Dark Pattern Detective extension. All patterns above are intentional.
+  </p>
+</body>
+</html>
