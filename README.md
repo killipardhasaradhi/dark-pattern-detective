@@ -127,6 +127,86 @@ The original `demo-page.html` is retained. The enhanced version can be used to d
 
 The v1.1 implementation continues to use the original Manifest V3, Vanilla JavaScript, Shadow DOM, local DOM analysis, and WCAG contrast-ratio approach while extending the detection and presentation layers. No external dependencies were added.
 
+## Enhanced Features Added in v1.2.0
+
+The v1.2.0 release builds on the original Dark Pattern Detective and expands the extension into a more complete detection, explanation, scoring, and reporting tool.
+
+The following features were added or improved in v1.2.0:
+
+- Expanded the detector into **10 user-facing dark-pattern signal types**:
+  - False Urgency
+  - Pre-checked Opt-in
+  - Confirmshaming
+  - Hidden Decline Button
+  - Forced Continuity Risk
+  - SaaS Billing
+  - Interface Interference
+  - Trick Wording
+  - Nagging
+  - Drip Pricing
+
+- Added a **Manipulation Score from 0–100** to summarize detected signals.
+
+- Added overall signal levels:
+  - CLEAR
+  - LOW
+  - MEDIUM
+  - HIGH
+
+- Added **confidence percentages** for individual findings.
+
+- Added **evidence extraction** so each finding can show the text or page element that triggered the detector.
+
+- Added **India CCPA 2023 category mapping** for detected signals.
+
+- Added an on-page **Shadow DOM Detective Panel** showing:
+  - Manipulation Score
+  - Overall signal level
+  - Detected findings
+  - Severity
+  - Confidence
+  - Evidence
+  - CCPA category mapping
+
+- Added **jump-to-evidence and highlighting**, allowing users to locate the detected element directly on the webpage.
+
+- Added **Download Report** functionality that generates a local plain-text `.txt` scan report.
+
+- Improved the popup dashboard with:
+  - Overall signal level
+  - Manipulation Score
+  - HIGH / MEDIUM / LOW finding counts
+  - Finding messages
+  - Evidence
+  - Confidence
+  - CCPA mapping
+  - Rescan button
+  - Download report button
+
+- Added **dynamic page rescanning** using `MutationObserver` for many dynamically inserted page elements.
+
+- Added rescanning for `popstate` and `hashchange` navigation events.
+
+- Improved the extension badge to reflect detected findings and higher-severity results.
+
+- Strengthened the **local-first architecture**:
+  - No external AI API
+  - No backend server
+  - No API key
+  - No remote database
+  - Detection runs locally in the browser
+
+- Improved the demonstration page with multiple intentional dark-pattern examples for testing.
+
+- Added clearer **heuristic and legal limitations**, making it clear that detections are signals for investigation and are not legal conclusions.
+
+### Version 1.2.0 Summary
+
+Version 1.2.0 moves Dark Pattern Detective beyond basic pattern detection by combining:
+
+**Detection → Evidence → Confidence → Severity → CCPA Mapping → Manipulation Score → Visual Highlighting → Report Generation**
+
+All detection remains browser-side and local-first.
 
 ---
 
